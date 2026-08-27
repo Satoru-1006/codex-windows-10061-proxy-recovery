@@ -1,0 +1,7 @@
+# Redacted public copy of the rebuilt Codex-home dotenv file after recovery.
+
+HTTP_PROXY=http://127.0.0.1:7892
+HTTPS_PROXY=http://127.0.0.1:7892
+NO_PROXY=localhost,127.0.0.1,::1
+
+# ALL_PROXY, WS_PROXY, and WSS_PROXY are intentionally absent in this minimal case fix.

@@ -1,0 +1,10 @@
+# Redacted public copy of the Codex-home dotenv snapshot before recovery.
+# The unrelated credential-bearing line from the original was removed entirely.
+
+HTTP_PROXY=http://127.0.0.1:8890
+HTTPS_PROXY=http://127.0.0.1:8890
+ALL_PROXY=http://127.0.0.1:8890
+NO_PROXY=localhost,127.0.0.1,::1
+
+# The original file contained one additional credential-related entry.
+# Its key name and value are intentionally omitted from this public copy.

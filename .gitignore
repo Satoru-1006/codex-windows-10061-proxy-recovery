@@ -1,0 +1,20 @@
+# Local/private artifacts must never enter the public repository.
+*.zip
+*.7z
+*.rar
+*.sqlite
+*.sqlite3
+*.db
+*.log
+.env
+*.env
+auth.json
+*subscription*
+*profile*
+*backup*
+*dump*
+*private*
+*.pem
+*.key
+*.p12
+*.pfx

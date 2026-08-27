@@ -1,0 +1,27 @@
+# Redacted relevant excerpt from the supplied codex doctor capture after fix.
+# Full local paths, account storage details, and unrelated inventory are omitted.
+
+Codex Doctor
+============
+runtime version: 0.150.0-alpha.8
+platform: Windows 11 x64, build 10.0.26200
+
+Connectivity
+------------
+network: network-related environment looks readable
+proxy env vars present: HTTP_PROXY, HTTPS_PROXY, NO_PROXY, lowercase equivalents
+respect system proxy: disabled
+
+websocket: Responses WebSocket failed; HTTPS fallback may still work
+endpoint: wss://chatgpt.com/backend-api/<redacted>
+handshake transport error: network error: tls handshake eof
+
+reachability: ChatGPT inference URL TLS handshake or certificate validation failed
+desktop assets CDN: request timed out (optional)
+
+Interpretation
+--------------
+- This captured run did not show os error 10061.
+- This captured run did not preserve an HTTP 101 WebSocket success.
+- The remaining failures are transport/node-quality observations from this run,
+  not proof that the original stale localhost endpoint was still active.

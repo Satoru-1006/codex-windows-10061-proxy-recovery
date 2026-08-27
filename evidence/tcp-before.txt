@@ -1,0 +1,17 @@
+# Redacted excerpt derived from the supplied before-fix TCP snapshot.
+# Ephemeral local ports and process IDs are removed because they are not needed
+# to understand the route and are not stable identifiers.
+
+LocalAddress  LocalPort  RemoteAddress  RemotePort  State        Process
+------------  ---------  -------------  ----------  -----------  -------
+127.0.0.1     7892       0.0.0.0        0           Listen       farmerCore (PID redacted)
+127.0.0.1     [ephemeral] 127.0.0.1    7892        Established  Codex/UI process (PID redacted)
+127.0.0.1     [ephemeral] 127.0.0.1    7892        CloseWait    Codex/UI process (PID redacted)
+
+# The supplied snapshot contained no row with local or remote port 8890.
+# The original investigation record separately reported a failed listener check
+# for 8890; the raw command output is not included here.
+
+# This evidence proves that 7892 was listening in the captured snapshot and that
+# 8890 was not present in that snapshot. The process-level timeline below supplies
+# the stronger observation that codex.exe repeatedly targeted 8890.

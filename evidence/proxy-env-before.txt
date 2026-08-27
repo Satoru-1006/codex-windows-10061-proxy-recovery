@@ -1,0 +1,25 @@
+# Redacted public copy of the before-fix User/Machine/Process proxy snapshot.
+# Empty cells in the original snapshot are represented by an empty field.
+# Windows environment variable names are case-insensitive.
+
+Name        User                              Machine                           Process
+----        ----                              -------                           -------
+HTTP_PROXY  http://127.0.0.1:7892             [empty]                           http://127.0.0.1:7892
+HTTPS_PROXY http://127.0.0.1:7892             [empty]                           http://127.0.0.1:7892
+ALL_PROXY   http://127.0.0.1:8890             [empty]                           http://127.0.0.1:8890
+NO_PROXY    localhost,127.0.0.1,::1           [empty]                           localhost,127.0.0.1,::1
+WS_PROXY
+WSS_PROXY
+
+http_proxy  http://127.0.0.1:7892             [empty]                           http://127.0.0.1:7892
+https_proxy http://127.0.0.1:7892             [empty]                           http://127.0.0.1:7892
+all_proxy   http://127.0.0.1:8890             [empty]                           http://127.0.0.1:8890
+no_proxy    localhost,127.0.0.1,::1           [empty]                           localhost,127.0.0.1,::1
+ws_proxy
+wss_proxy
+
+# Interpretation:
+# - A live endpoint was configured on 7892 at User and Process levels.
+# - A second endpoint, 8890, was also present at User and Process levels.
+# - The Machine-level column was empty in the supplied snapshot.
+# - This file does not by itself prove which layer won for each Codex route.

@@ -1,0 +1,59 @@
+# Redacted, audit-friendly reduction of the supplied 8-minute TCP timeline.
+# Source: 240 samples from 19:55:39 through 20:10:28 local time (UTC+8).
+# Raw ephemeral ports, public remote IPs, and process IDs are intentionally removed.
+# The reduction keeps only endpoint, state, timestamp, and count.
+
+## Summary
+
+samples_total=240
+codex_to_127.0.0.1:8890_observations=54
+codex_to_127.0.0.1:8890_sample_timestamps=36
+state_for_8890_observations=SynSent
+other_local_proxy_observations=127.0.0.1:7892 repeatedly present
+
+## Observed 8890 attempts
+
+timestamp  endpoint              state    count
+19:55:39   127.0.0.1:8890       SynSent  3
+19:55:44   127.0.0.1:8890       SynSent  1
+19:56:11   127.0.0.1:8890       SynSent  1
+19:56:28   127.0.0.1:8890       SynSent  2
+19:56:32   127.0.0.1:8890       SynSent  1
+19:56:36   127.0.0.1:8890       SynSent  3
+19:56:40   127.0.0.1:8890       SynSent  1
+19:56:45   127.0.0.1:8890       SynSent  2
+19:56:50   127.0.0.1:8890       SynSent  1
+19:57:16   127.0.0.1:8890       SynSent  1
+19:57:41   127.0.0.1:8890       SynSent  1
+19:57:44   127.0.0.1:8890       SynSent  1
+19:57:48   127.0.0.1:8890       SynSent  1
+19:57:52   127.0.0.1:8890       SynSent  2
+19:58:00   127.0.0.1:8890       SynSent  1
+19:58:04   127.0.0.1:8890       SynSent  1
+19:58:11   127.0.0.1:8890       SynSent  1
+19:58:56   127.0.0.1:8890       SynSent  3
+19:58:59   127.0.0.1:8890       SynSent  3
+19:59:03   127.0.0.1:8890       SynSent  1
+19:59:07   127.0.0.1:8890       SynSent  1
+19:59:15   127.0.0.1:8890       SynSent  1
+19:59:20   127.0.0.1:8890       SynSent  1
+19:59:23   127.0.0.1:8890       SynSent  1
+19:59:27   127.0.0.1:8890       SynSent  1
+20:00:08   127.0.0.1:8890       SynSent  2
+20:00:12   127.0.0.1:8890       SynSent  2
+20:00:15   127.0.0.1:8890       SynSent  2
+20:00:19   127.0.0.1:8890       SynSent  2
+20:00:27   127.0.0.1:8890       SynSent  1
+20:00:31   127.0.0.1:8890       SynSent  1
+20:01:22   127.0.0.1:8890       SynSent  2
+20:01:28   127.0.0.1:8890       SynSent  2
+20:01:34   127.0.0.1:8890       SynSent  1
+20:01:38   127.0.0.1:8890       SynSent  1
+20:01:43   127.0.0.1:8890       SynSent  2
+
+## Interpretation
+
+The repeated 8890 observations belong to the failing Codex process in the
+original process-level capture. The supplied source file does not contain a
+post-fix equivalent trace, so this public reduction does not claim an audited
+zero-attempt result after recovery.

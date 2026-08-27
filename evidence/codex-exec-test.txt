@@ -1,0 +1,21 @@
+# Redacted relevant excerpt from the supplied real-request verification.
+# The original session identifier and local executable path are removed.
+
+OpenAI Codex v0.150.0-alpha.8
+model: gpt-5.6-luna
+provider: openai
+approval: never
+sandbox: workspace-write
+reasoning effort: xhigh
+session id: <REDACTED>
+
+user
+Reply with exactly: CODEX_REVIVED_OK
+
+diagnostic note: one responses_websocket tls handshake eof was logged before
+the request completed through the available fallback path.
+
+codex
+CODEX_REVIVED_OK
+tokens used
+5,988
